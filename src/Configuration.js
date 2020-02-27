@@ -4,7 +4,7 @@ import { prowStyle } from './Styles'
 const Configuration = {
     Map: {
         StartingLatLng: [53.3915, -2.125143],
-        StartingZoom: 18,
+        StartingZoom: 12,
         FullscreenControl: true,
         DisplayLayerControls: true,
         DisplayGrayScale: true,
