@@ -15,7 +15,7 @@ const Configuration = {
     [
         {
             key: 'Public Rights of Way',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=highways:public_rights_of_way&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            url: 'https://scnmapsrv.stockport.gov.uk:8080/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=highways:public_rights_of_way&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
                 onEachFeature: prowPopup,
                 maxZoom: 2,
@@ -26,7 +26,7 @@ const Configuration = {
         },
         {
             key: 'os1250_line',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
@@ -39,7 +39,7 @@ const Configuration = {
         },
         {
             key: 'os1250_text',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
