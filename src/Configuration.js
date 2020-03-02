@@ -26,7 +26,7 @@ const Configuration = {
         },
         {
             key: 'os1250_line',
-            url: 'https://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
@@ -39,7 +39,7 @@ const Configuration = {
         },
         {
             key: 'os1250_text',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
@@ -55,7 +55,7 @@ const Configuration = {
     [
         {
             key: 'boundary',
-            url: 'http://spatialgeojson.s3-eu-west-1.amazonaws.com/webmapping/boundary.geojson',
+            url: 'https://spatialgeojson.s3-eu-west-1.amazonaws.com/webmapping/boundary.geojson',
             layerOptions: {
                 interactive: false,
                 maxZoom: 9,
