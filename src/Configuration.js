@@ -26,7 +26,7 @@ const Configuration = {
         },
         {
             key: 'os1250_line',
-            url: 'http://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
+            url: 'https://scnmapsrv.stockport.gov.uk:8080/geoserver/wms?',
             layerOptions: {
                 maxZoom: 20,
                 minZoom: 19,
