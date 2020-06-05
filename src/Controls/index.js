@@ -8,7 +8,7 @@ const AddLayerControlsLayers = MapConfig => {
     controlLayers['Ordnance Survey'] = os_open
 
     if (MapConfig.DisplayGrayScale) {
-      controlLayers['Open Street Map'] = streetlayer
+      controlLayers['Open Street Map'] = streetLayer
     }
 
     if (MapConfig.DisplayStreets) {
