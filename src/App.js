@@ -104,19 +104,30 @@ function App() {
     /** opens new popup with new content and binds to map, this is instead of using 
      * mapRef.current._popup.setConent as the popup is bound to the layer and not 
      * the map and will therefore close when you move the map */
-    if(layerContentInMap){
+    if (layerContentInMap) {
       Leaflet.popup()
         .setLatLng(onClickLatLng)
         .setContent(layerContentInMap)
         .openOn(mapRef.current)
-    }else{
+    } else {
       Leaflet.popup()
         .setLatLng(onClickLatLng)
         .setContent(mapRef.current._popup._content)
         .openOn(mapRef.current)
     }
+
+    panMap(onClickLatLng)
+
   }, [onClickLatLng])
+
+  const panMap = latLng => {
+    var px = mapRef.current.project(latLng)
+    px.y -= mapRef.current._popup._container.clientHeight/2
+    mapRef.current.panTo(mapRef.current.unproject(px),{animate: true})
+  }
+
   const onPopupOpenHandler = event =>  setOnClickLatLng(event.popup._latlng)
+  
   useEffect(() => {
     mapRef.current.addEventListener('popupopen', onPopupOpenHandler)
 
