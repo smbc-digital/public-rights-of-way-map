@@ -9,7 +9,8 @@ const Configuration = {
         DisplayLayerControls: true,
         DisplayGrayScale: true,
         DisplayStreets: true,
-        EnableAddressSearch: true
+        EnableAddressSearch: true,
+        EnableLocateControl: true
     },
     DynamicData: 
     [

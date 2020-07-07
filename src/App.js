@@ -5,6 +5,7 @@ import Config from './Configuration.js'
 import { os_open } from './Tiles'
 import { AddLayerControlsLayers, AddLayerControlsOverlays, SearchControlOverlay } from './Controls'
 import leafletPip from '@mapbox/leaflet-pip'
+import locate from 'leaflet.locatecontrol'
 
 function App() {
   const mapRef = useRef()
@@ -29,7 +30,14 @@ function App() {
     setStaticLayers()
     setDynamicLayers()
     setLayerControls()
+    setLocateControl()
   }, [])
+
+  const setLocateControl = () => {
+    if (Config.Map.EnableLocateControl) {
+      Leaflet.control.locate().addTo(mapRef.current) 
+    }
+  }
 
   const setLayerControls = () => {
     const controlLayers = AddLayerControlsLayers(Config.Map)
