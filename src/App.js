@@ -5,7 +5,7 @@ import Config from './Configuration.js'
 import { os_open } from './Tiles'
 import { AddLayerControlsLayers, AddLayerControlsOverlays, SearchControlOverlay } from './Controls'
 import leafletPip from '@mapbox/leaflet-pip'
-import locate from 'leaflet.locatecontrol'
+import locate from 'leaflet.LocateControl'  // eslint-disable-line no-unused-vars
 
 function App() {
   const mapRef = useRef()
