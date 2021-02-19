@@ -19,6 +19,7 @@ function App() {
 
   useEffect(() => {
     mapRef.current = Leaflet.map('map', {
+      //attributionControl:false, 
       preferCanvas: true,
       minZoom: 12,
       fullscreenControl: Config.Map.FullscreenControl || false,
@@ -27,11 +28,13 @@ function App() {
       ]
     }).setView(Config.Map.StartingLatLng || [53.413519, -2.085143], Config.Map.StartingZoom || 12)
 
+    mapRef.current.attributionControl.addAttribution('© Crown copyright and database rights 2021 Ordnance Survey 100019571. © OpenStreetMap contributors')
+
     setStaticLayers()
     setDynamicLayers()
     setLayerControls()
     setLocateControl()
-  }, [])
+  } ,[])
 
   const setLocateControl = () => {
     if (Config.Map.EnableLocateControl) {
