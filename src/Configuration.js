@@ -10,7 +10,8 @@ const Configuration = {
         DisplayGrayScale: true,
         DisplayStreets: true,
         EnableAddressSearch: true,
-        EnableLocateControl: true
+        EnableLocateControl: true,
+        Class: 'govuk-grid-column-full smbc-map__container'
     },
     DynamicData: 
     [
